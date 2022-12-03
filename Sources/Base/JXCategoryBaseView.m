@@ -490,10 +490,10 @@ struct DelegateFlags {
         if (selectedType == JXCategoryCellSelectedTypeCode) {
             [self.listContainer didClickSelectedItemAtIndex:targetIndex];
         }else if (selectedType == JXCategoryCellSelectedTypeClick) {
-            [self.listContainer didClickSelectedItemAtIndex:targetIndex];
             if (self.delegateFlags.didClickSelectedItemAtIndexFlag) {
                 [self.delegate categoryView:self didClickSelectedItemAtIndex:targetIndex];
             }
+            [self.listContainer didClickSelectedItemAtIndex:targetIndex];
         }else if (selectedType == JXCategoryCellSelectedTypeScroll) {
             if (self.delegateFlags.didScrollSelectedItemAtIndexFlag) {
                 [self.delegate categoryView:self didScrollSelectedItemAtIndex:targetIndex];
@@ -547,10 +547,10 @@ struct DelegateFlags {
     if (selectedType == JXCategoryCellSelectedTypeCode) {
         [self.listContainer didClickSelectedItemAtIndex:targetIndex];
     } else if (selectedType == JXCategoryCellSelectedTypeClick) {
-        [self.listContainer didClickSelectedItemAtIndex:targetIndex];
         if (self.delegateFlags.didClickSelectedItemAtIndexFlag) {
             [self.delegate categoryView:self didClickSelectedItemAtIndex:targetIndex];
         }
+        [self.listContainer didClickSelectedItemAtIndex:targetIndex];
     } else if(selectedType == JXCategoryCellSelectedTypeScroll) {
         if (self.delegateFlags.didScrollSelectedItemAtIndexFlag) {
             [self.delegate categoryView:self didScrollSelectedItemAtIndex:targetIndex];
